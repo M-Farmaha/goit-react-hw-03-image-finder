@@ -1,6 +1,6 @@
 const BASE_URL = 'https://pixabay.com/api/';
 const KEY = '34891957-fbaa485884f22f3e8d25bd4d4';
-const image_type = 'photo';
+const image_type = 'all';
 const orientation = 'horizontal';
 const safesearch = 'true';
 let page = 1;

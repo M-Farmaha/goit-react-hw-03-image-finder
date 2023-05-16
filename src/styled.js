@@ -154,7 +154,7 @@ export const ModalOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,6 +163,7 @@ export const ModalOverlay = styled.div`
 
 export const Modal = styled.div`
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
