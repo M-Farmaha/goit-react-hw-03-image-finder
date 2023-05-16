@@ -12,7 +12,7 @@ export const Searchbar = styled.header`
   top: 0;
   left: 0;
   position: sticky;
-  z-index: 1100;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@ export const Searchbar = styled.header`
   padding-top: 12px;
   padding-bottom: 12px;
   color: #fff;
-  background-color: #3f51b5;
+  background-color: rgba(41, 54, 67, 0.9);
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
@@ -44,17 +44,13 @@ export const SearchFormButton = styled.button`
   width: 48px;
   height: 48px;
   border: none;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.6;
+  color: #b6b6b6;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
 
-  &:hover {
-    opacity: 1;
+  &:first-child:hover {
+    color: #0080ff;
   }
 `;
 
@@ -70,8 +66,8 @@ export const SearchFormInput = styled.input`
   font-size: 20px;
   border: none;
   outline: none;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   &::placeholder {
     font: inherit;
@@ -93,9 +89,9 @@ export const ImageGallery = styled.ul`
 `;
 
 export const ImageGalleryItem = styled.li`
-  border-radius: 2px;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 `;
 
 export const ImageGalleryImg = styled.img`
@@ -141,4 +137,40 @@ export const LoadMoreBtn = styled.button`
 export const LoaderWrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
+  z-index: 9999;
+`;
+
+export const LoaderWrapperModal = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+`;
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+`;
+
+export const Modal = styled.div`
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+`;
+
+export const ModalImage = styled.img`
+  max-width: calc(100vw - 50px);
+  max-height: calc(100vh - 50px);
+  object-fit: scale-down;
 `;

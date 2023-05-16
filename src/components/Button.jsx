@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import * as Styled from 'styled';
+import PropTypes from 'prop-types';
 
 export class LoadMoreBtn extends Component {
   handleLoadMoreBtnClick = () => {
@@ -15,3 +16,7 @@ export class LoadMoreBtn extends Component {
     );
   }
 }
+
+LoadMoreBtn.propTypes = {
+  loadMore: PropTypes.func.isRequired,
+};
